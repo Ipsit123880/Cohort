@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = "index.css" rel = "stylesheet">
+</head>
+<body>
+    <script>
+        async function getAnimalData(){
+           const response =  await fetch("https://fakerapi.it/api/v1/persons");
+           const finalData = await response.json();
+           console.log(finalData);
+        }
+
+    </script>
+
+    <button onClick = "getAnimalData()">Get Animal Data</button>
+</body>
+</html>
+
+
+// async: This keyword is used to define an asynchronous function. It allows the use of await inside the function to handle promises.
+// const response = await fetch("https://fakerapi.it/api/v1/persons");:
+
+// fetch("https://fakerapi.it/api/v1/persons"): The fetch function is a modern JavaScript API for making HTTP requests.
+// It returns a Promise that resolves to the Response to that request, whether it is successful or not.
+// await: This keyword is used to wait for the resolution of the Promise returned by fetch. It can only be used inside an async function.
+// It pauses the execution of the function until the Promise is resolved.
+// const finalData = await response.json();:
+
+// response.json(): The json() method of the Response object is an asynchronous method that reads the response body to
+// completion and parses the body text as JSON. It also returns a Promise.
+// await: Similar to the previous usage, it's used to wait for the Promise returned by response.json() to be resolved.
+// console.log(finalData);:
+
+// console.log(): This is a function used to log the data to the console.
+// finalData: This is the variable that holds the parsed JSON data obtained from the response body.
+// Putting it all together, the getAnimalData function is an asynchronous function that fetches data from the specified URL,
+// waits for the response, parses the response body as JSON, and then logs the final parsed data to the console.
+// The await keyword is crucial for managing asynchronous code in a readable and sequential manner.
+
+// Synchronous vs. Asynchronous:
+
+// In programming, operations are either synchronous or asynchronous.
+// Synchronous operations: Execute one after the other, and each operation must finish before the next one starts.
+// Asynchronous operations: Can start, run in the background, and finish independently of the main program flow.
+// Asynchronous Nature of JavaScript:
+
+// JavaScript is a single-threaded language, meaning it executes one operation at a time in a sequence.
+// However, JavaScript can handle asynchronous tasks efficiently through the use of events and callbacks.
+// Async Functions and Promises:
+
+// An asynchronous function is a type of function in JavaScript that allows you to work with asynchronous code more easily.
+// Async functions are defined using the async keyword before the function keyword.
+// Example of Asynchronous Code:
+
+// Consider fetching data from an external source (e.g., an API).
+// In synchronous code, you would have to wait for the data to arrive before moving on to the next task, potentially 
+// causing the program to freeze.
+// With asynchronous code, you can continue with other tasks while waiting for the data to arrive.
+// Using async and await:
+
+// The async keyword is used to define an asynchronous function.
+// The await keyword is used inside an async function to wait for the completion of
