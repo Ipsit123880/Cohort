@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 async function main(){
-    await mongoose.connect('mongodb://127.0.0.1:27017/week_5_2');
+    await mongoose.connect('Mongo Link');
 }
 main()
     .then(() => {
