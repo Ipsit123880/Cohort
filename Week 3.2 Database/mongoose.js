@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://localhost:27017/test');
+mongoose.connect('Ur_Mongo_Link');
 
 const User = mongoose.model('User', {
     name: String,
